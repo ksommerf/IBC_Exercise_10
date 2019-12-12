@@ -26,9 +26,9 @@ nonmutant <- data.frame(time=1:timesteps,N=Ns)
 mutant <- data.frame(time=1:timesteps,M=Ms)
 ggplot() + geom_line(data=nonmutant,aes(x=time,y=N),color="blue") + geom_line(data=mutant,aes(x=time,y=M),color="red") + xlab("Time") + ylab("Cell Count")
 
-#assume equilibrium is occuring at timestep=330for (t in 1:(timesteps-1)){
-if (t<330)
-{
+#assume equilibrium is occuring at timestep=330 
+for (t in 1:(timesteps-1)){
+if (t<330){
   Ns[t+1] <- Ns[t]+rN*Ns[t]*(1-(Ns[t]+Ms[t])/K)
   Ms[t+1] <- Ms[t]+rM*Ms[t]*(1-(Ns[t]+Ms[t])/K) 
 } else {
