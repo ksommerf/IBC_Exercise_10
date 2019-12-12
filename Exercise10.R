@@ -1,8 +1,8 @@
 #Kyle Sommerfield and Farai Musariri
 
 #Set parameters (before mutation)
-rN=-0.1
-rM=0.05
+rN=0.1
+rM=0.1
 N0=99
 M0=1
 K=1000000
